@@ -1,0 +1,421 @@
+/* ============================================
+   STORINT.ORG — Shared Stylesheet
+   Colours: #1800ad (navy), #006ab6 (blue),
+            #02b3e0 (cyan), #9ee8fb (light cyan),
+            #d9e4e7 (pale), #fff
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy:   #1800ad;
+  --blue:   #006ab6;
+  --cyan:   #02b3e0;
+  --light:  #9ee8fb;
+  --pale:   #d9e4e7;
+  --off:    #f4f6f8;
+  --text:   #0f0e1a;
+  --muted:  #5a5a72;
+  --border: #dde2e8;
+  --white:  #ffffff;
+  --radius: 10px;
+  --radius-lg: 14px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--white);
+}
+
+/* ── NAV ── */
+.nav {
+  background: var(--navy);
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  color: var(--white);
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.nav-logo .accent { color: var(--light); }
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,.75);
+  font-size: 14px;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--light);
+  border-bottom-color: var(--light);
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--navy);
+  padding: 5.5rem 2.5rem 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 120%, #02b3e022 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: var(--off);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: var(--light);
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.15;
+  max-width: 660px;
+  margin: 0 auto 1.25rem;
+  letter-spacing: -.01em;
+}
+
+.hero h1 em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--light);
+}
+
+.hero-sub {
+  color: rgba(255,255,255,.72);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 490px;
+  margin: 0 auto 2.25rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity .18s, transform .12s;
+  border: none;
+  font-family: inherit;
+}
+.btn:hover { opacity: .88; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+
+.btn-cyan  { background: var(--cyan);  color: var(--white); }
+.btn-ghost { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,.4); }
+.btn-navy  { background: var(--navy);  color: var(--white); }
+.btn-full  { width: 100%; text-align: center; padding: 13px; }
+
+/* ── SECTIONS ── */
+.section     { padding: 4rem 2.5rem; background: var(--off); }
+.section-alt { padding: 4rem 2.5rem; background: var(--white); }
+.inner       { max-width: 840px; margin: 0 auto; }
+.inner-sm    { max-width: 640px; margin: 0 auto; }
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+
+.section-label.center,
+.section-title.center { text-align: center; }
+
+.section-title {
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 2rem;
+  letter-spacing: -.01em;
+}
+
+/* ── PILLARS ── */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 14px;
+}
+
+.pillar-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: .5px solid var(--border);
+  padding: 1.2rem 1.5rem;
+}
+
+.pillar-pip {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-bottom: .7rem;
+}
+
+.pillar-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 5px; }
+.pillar-card p  { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ── STATS ── */
+.stat-strip {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1rem;
+  display: flex;
+  margin-top: 2.5rem;
+  overflow: hidden;
+}
+
+.stat         { flex: 1; text-align: center; padding: .5rem 1rem; }
+.stat-n       { font-size: 32px; font-weight: 300; color: var(--light); letter-spacing: -.02em; }
+.stat-l       { font-size: 12px; color: rgba(255,255,255,.6); margin-top: 4px; line-height: 1.4; }
+.stat-divider { width: 1px; background: rgba(255,255,255,.12); flex-shrink: 0; }
+
+/* ── MISSION BLOCK ── */
+.mission-card {
+  background: var(--off);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--cyan);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+}
+.mission-card p { font-size: 16px; line-height: 1.8; color: var(--text); font-weight: 300; }
+
+/* ── TEAM ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 12px;
+}
+
+.team-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: .5px solid var(--border);
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+.avatar {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--light);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 500;
+  margin: 0 auto .75rem;
+}
+
+/* ── If you have a photo, replace .avatar with an <img> ── */
+.avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+
+.team-card h4  { font-size: 13px; font-weight: 500; }
+.team-card p   { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+.uni-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--off);
+  border: .5px solid var(--border);
+  border-radius: 8px;
+  padding: .65rem 1.1rem;
+  margin-top: 1.5rem;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ── TOOLKIT PAGE ── */
+.page-header {
+  background: var(--navy);
+  padding: 3rem 2.5rem 2.75rem;
+}
+.page-header h1 { color: var(--white); font-size: 30px; font-weight: 300; letter-spacing: -.01em; }
+.page-header p  { color: rgba(255,255,255,.7); font-size: 15px; margin-top: .75rem; max-width: 480px; line-height: 1.65; }
+
+.pdf-wrap {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: .5px solid var(--border);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,50,.06);
+}
+
+.pdf-topbar {
+  background: var(--blue);
+  padding: .7rem 1.25rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.pdf-topbar span { color: var(--white); font-size: 13px; }
+
+.pdf-download {
+  background: var(--cyan);
+  color: var(--white);
+  padding: 5px 14px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* ── Replace this block once toolkit.pdf is added ── */
+.pdf-placeholder {
+  height: 520px;
+  background: var(--off);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ── When toolkit.pdf is ready, swap placeholder div for: ── */
+/* <iframe src="toolkit.pdf" width="100%" height="520" style="border:none;display:block;"></iframe> */
+
+/* ── FEEDBACK NUDGE ── */
+.nudge {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  text-align: center;
+}
+.nudge h3 { color: var(--white); font-size: 22px; font-weight: 300; margin-bottom: .6rem; }
+.nudge p  { color: rgba(255,255,255,.68); font-size: 14px; line-height: 1.65; max-width: 400px; margin: 0 auto 1.5rem; }
+
+/* ── FEEDBACK PAGE ── */
+.google-form-wrap {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: .5px solid var(--border);
+  overflow: hidden;
+}
+
+/* ── Replace src below with your Google Form embed URL ── */
+.google-form-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 860px;
+  border: none;
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy);
+  padding: 1.75rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-decoration: none;
+}
+.footer-logo .accent { color: var(--light); }
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  display: flex; align-items: center; gap: 7px;
+  color: rgba(255,255,255,.65);
+  font-size: 13px;
+  text-decoration: none;
+  transition: color .18s;
+}
+.footer-link:hover { color: var(--light); }
+
+.footer-copy { color: rgba(255,255,255,.35); font-size: 12px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .hero h1       { font-size: 30px; }
+  .pillar-grid   { grid-template-columns: 1fr; }
+  .team-grid     { grid-template-columns: repeat(2, 1fr); }
+  .stat-strip    { flex-direction: column; }
+  .stat-divider  { width: auto; height: 1px; }
+  .nav           { padding: 0 1.25rem; }
+  .hero          { padding: 3.5rem 1.25rem 4.5rem; }
+  .section,
+  .section-alt   { padding: 3rem 1.25rem; }
+  footer         { flex-direction: column; align-items: flex-start; }
+}
