@@ -48,17 +48,16 @@ body {
 }
 
 .nav-logo {
-  color: var(--white);
-  font-size: 19px;
-  font-weight: 500;
-  letter-spacing: .07em;
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 9px;
 }
 
-.nav-logo .accent { color: var(--light); }
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
 
 .nav-links {
   display: flex;
@@ -271,8 +270,9 @@ body {
 /* ── If you have a photo, replace .avatar with an <img> ── */
 .avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
 
-.team-card h4  { font-size: 13px; font-weight: 500; }
-.team-card p   { font-size: 11px; color: var(--muted); margin-top: 3px; }
+.team-card h4    { font-size: 13px; font-weight: 500; }
+.team-role       { font-size: 11px; color: var(--blue); font-weight: 500; margin-top: 3px; letter-spacing: .04em; }
+.team-bio        { font-size: 11px; color: var(--muted); margin-top: 6px; line-height: 1.5; font-style: italic; }
 
 .uni-pill {
   display: inline-flex; align-items: center; gap: 8px;
