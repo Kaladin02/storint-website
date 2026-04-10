@@ -381,13 +381,16 @@ footer {
 }
 
 .footer-logo {
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: .07em;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-.footer-logo .accent { color: var(--light); }
+
+.footer-logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
 
 .footer-links {
   display: flex;
