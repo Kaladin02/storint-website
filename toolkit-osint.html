@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toolkit for OSINT Organisations &mdash; STORINT</title>
+  <meta name="description" content="STORINT's audience-specific toolkit for OSINT organisations: turning verification methodology into public-facing narrative content, without dilution.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo"><img src="storint logo.svg" alt="STORINT" class="nav-logo-img"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#toolkits" class="active">Toolkits</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <header class="toolkit-header">
+    <div class="toolkit-header-inner">
+      <span class="toolkit-tag">Toolkit &middot; OSINT organisations</span>
+      <h1>For investigators, analysts, and comms leads turning <em>verified findings into narrative content</em></h1>
+      <p class="toolkit-header-sub">OSINT organisations have built the most rigorous open-source investigative methodology of any sector. The gap is not in your investigation &mdash; it's in what happens after. This toolkit is for the work between a verified finding and a public audience seeing it.</p>
+      <div class="toolkit-meta">
+        <span class="toolkit-meta-item"><strong>Status:</strong> Working draft &middot; v0.1</span>
+        <span class="toolkit-meta-item"><strong>Built on:</strong> Foundational four-pillar framework</span>
+        <span class="toolkit-meta-item"><strong>Reading time:</strong> ~12 minutes</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── BODY ── -->
+  <main class="toolkit-body">
+    <div class="toolkit-layout">
+
+      <!-- Sidebar nav -->
+      <aside class="toolkit-sidebar">
+        <p class="toolkit-sidebar-label">In this toolkit</p>
+        <ol>
+          <li><a href="#audience">Who this is for</a></li>
+          <li><a href="#gap">The translation gap</a></li>
+          <li><a href="#verification">Verification as content</a></li>
+          <li><a href="#engagement">Engagement without dilution</a></li>
+          <li><a href="#formats">Three video formats</a></li>
+          <li><a href="#workflow">Building a comms function</a></li>
+          <li><a href="#checklist">Pre-publish checklist</a></li>
+          <li><a href="#next">What's next</a></li>
+        </ol>
+      </aside>
+
+      <!-- Content -->
+      <div class="toolkit-content">
+
+        <!-- 01: WHO THIS IS FOR -->
+        <section id="audience" class="toolkit-section">
+          <p class="toolkit-section-eyebrow">01 &middot; Audience</p>
+          <h2>Who this is for, and what you already do well</h2>
+          <p>If you spend your time geolocating from satellite passes, breaking down witness footage frame by frame, cross-referencing social media against ground reports, or running open-source investigations that get submitted to courts and UN bodies &mdash; this toolkit is for you. Specifically:</p>
+          <ul>
+            <li>Investigators and analysts at established OSINT organisations (Bellingcat, CIR, BBC Verify and equivalents)</li>
+            <li>Smaller and newer OSINT collectives without dedicated comms staff</li>
+            <li>Comms leads at organisations where verification expertise sits separately from public-facing output</li>
+            <li>Researchers integrating OSINT methods into adjacent fields (human rights monitoring, conflict documentation, fact-checking)</li>
+          </ul>
+
+          <h3>The premise of this toolkit</h3>
+          <p>Existing communications guidance treats OSINT outputs as raw material to be simplified for general audiences. This toolkit takes the opposite position: <strong>your methodology is the asset</strong>. The work of verification &mdash; the geolocation, the timestamping, the cross-referencing &mdash; is what makes your content distinctive in a feed full of unsourced claims. Public-facing content that hides this process is throwing away its strongest competitive advantage.</p>
+
+          <div class="tk-two">
+            <div class="tk-two-card">
+              <h4>What you already do well</h4>
+              <p>Verification chains. Primary sourcing. Geolocation. Frame-level analysis. Methodology transparency. Institutional credibility. Detailed reports that withstand legal scrutiny.</p>
+            </div>
+            <div class="tk-two-card">
+              <h4>What this toolkit addresses</h4>
+              <p>Translating verified findings into short-form, social-native formats &mdash; quickly, without dilution, and within investigation workflows that don't necessarily include a comms team.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02: THE GAP -->
+        <section id="gap" class="toolkit-section">
+          <p class="toolkit-section-eyebrow">02 &middot; Why this matters</p>
+          <h2>Your reports reach institutions. Misinformation reaches the public.</h2>
+          <p>The connection between public visibility and humanitarian funding is well established (Rost &amp; Clarke, 2024). Crises that receive sustained social-media coverage attract greater funding and stronger diplomatic pressure. Crises that don't &mdash; Sudan, DRC, Haiti, Myanmar &mdash; consistently receive less of both, irrespective of severity.</p>
+
+          <div class="tk-stats">
+            <div class="tk-stat">
+              <div class="tk-stat-n">88%</div>
+              <div class="tk-stat-l">of 18&ndash;24 year olds in the UK use social media as a primary source of news</div>
+              <div class="tk-stat-src">Ofcom, 2024</div>
+            </div>
+            <div class="tk-stat">
+              <div class="tk-stat-n">40%</div>
+              <div class="tk-stat-l">of the public across 47 markets say they trust most news most of the time</div>
+              <div class="tk-stat-src">Reuters Institute, 2024</div>
+            </div>
+            <div class="tk-stat">
+              <div class="tk-stat-n">6&times;</div>
+              <div class="tk-stat-l">faster spread of false news than true news on Twitter / X</div>
+              <div class="tk-stat-src">Vosoughi, Roy &amp; Aral, 2018</div>
+            </div>
+          </div>
+
+          <p>OSINT organisations sit in an unusual position in this landscape. You produce some of the most carefully verified content available. You also reach almost none of the audiences where misinformation about the same events is doing its work. The reports go to courts, UN bodies, and policy briefings. The public sees the misinformation.</p>
+
+          <div class="tk-callout-navy">
+            <p><strong>The gap is not in detection or verification &mdash; it's in translation.</strong> When verified content is slow, misinformation fills the vacuum. The sections below are about closing that gap inside your existing workflow.</p>
+          </div>
+        </section>
+
+        <!-- 03: VERIFICATION AS CONTENT -->
+        <section id="verification" class="toolkit-section">
+          <p class="toolkit-section-eyebrow">03 &middot; Pillar one</p>
+          <h2>Verification is the content, not a footnote to it</h2>
+          <p>Trust in news is at a historic low and audiences increasingly distinguish between content that <em>tells</em> them something and content that <em>shows them how it knows</em>. Research by Curry and Stroud (2021) found that transparency in journalistic content directly increases credibility ratings. BBC Verify's founding principle was to make the verification process itself publicly visible. Bellingcat publishes detailed methodology alongside every investigation. Both have demonstrated that <strong>showing the work isn't a distraction from the story &mdash; it is the story</strong>.</p>
+
+          <div class="tk-quote">
+            <p>"Where did you get that statistic from? And then it just kind of fizzles out. I'd rather see a source than have to ask where it came from."</p>
+            <cite>Focus group participant, University of Bristol, 2025</cite>
+          </div>
+
+          <h3>What must appear on screen</h3>
+          <p>Social audiences are more sceptical than traditional ones. Minimum sourcing standards are non-negotiable, but they're also the easiest thing to design into a template. Set these once and apply them to every piece of content.</p>
+
+          <div class="tk-three">
+            <div class="tk-three-card">
+              <h4>Satellite imagery</h4>
+              <p>Platform, date of capture, analysing organisation. Lower-third caption at the moment the image appears.</p>
+            </div>
+            <div class="tk-three-card">
+              <h4>Witness footage</h4>
+              <p>Source platform, date posted, verification method. Don't display unverified footage. Flag uncertainty explicitly.</p>
+            </div>
+            <div class="tk-three-card">
+              <h4>News &amp; data</h4>
+              <p>Publication and date. Named source for every figure. Prefer primary sources (UN, agency reports) over secondary coverage.</p>
+            </div>
+          </div>
+
+          <h3>Showing your work</h3>
+          <div class="tk-do-dont">
+            <div class="tk-do">
+              <h4>Do</h4>
+              <ul>
+                <li>Walk audiences through the verification chain on screen, step by step</li>
+                <li>Name your tools and methods (TinEye, InVID, Google Earth Pro, geolocation by shadow analysis)</li>
+                <li>Distinguish between confidence levels: verified, likely, contested, unverified</li>
+                <li>Acknowledge what you <em>couldn't</em> verify &mdash; gaps build credibility, not erode it</li>
+                <li>Use consistent lower-third caption design so audiences learn to read your sources</li>
+              </ul>
+            </div>
+            <div class="tk-dont">
+              <h4>Don't</h4>
+              <ul>
+                <li>Compress methodology into &ldquo;trust us, we verified it&rdquo;</li>
+                <li>Hide tools and methods behind organisational branding</li>
+                <li>Conflate confidence levels for narrative tidiness</li>
+                <li>Bury sourcing in pinned comments or video descriptions</li>
+                <li>Use stock footage or unattributed imagery as B-roll &mdash; it undermines everything else</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 04: ENGAGEMENT -->
+        <section id="engagement" class="toolkit-section">
+          <p class="toolkit-section-eyebrow">04 &middot; Pillar two</p>
+          <h2>Engagement without dilution</h2>
+          <p>Short-form video is sometimes treated as a synonym for dumbing-down. The research disagrees. Narrative framing consistently outperforms data presentation in driving emotional engagement and perceived relevance (Dahlstrom, 2014), and educative tone outperforms alarming tone for long-term audience retention. The question isn't whether to adapt for short-form &mdash; it's how to do so without losing what makes your work credible.</p>
+
+          <h3>Three barriers to engagement (and how to design around them)</h3>
+          <p>Primary research with young adult audiences (University of Bristol, 2025) identified three consistent reasons verified crisis content fails to land. OSINT content is particularly vulnerable to all three.</p>
+
+          <div class="tk-three">
+            <div class="tk-three-card">
+              <h4>Emotional overload</h4>
+              <p>Persistent exposure to distressing content depletes capacity to engage. Self-preservation, not indifference. <strong>Design for:</strong> sober pacing, educative framing, no shock-hooks.</p>
+            </div>
+            <div class="tk-three-card">
+              <h4>Doom &amp; gloom framing</h4>
+              <p>Content that presents only severity without context or agency reads as a &ldquo;barrage&rdquo;. <strong>Design for:</strong> historical context, what's known and unknown, what comes next.</p>
+            </div>
+            <div class="tk-three-card">
+              <h4>Helplessness</h4>
+              <p>The feeling that individual awareness can't translate into action causes early disengagement. <strong>Design for:</strong> a clear &ldquo;so what&rdquo;, named pathways for action or follow-up.</p>
+            </div>
+          </div>
+
+          <div class="tk-quote">
+            <p>"When it's so doom and gloom, I find that quite hard to consume large amounts of it. When it's slightly more educative &mdash; yeah, it's easier to look at and to teach yourself about, rather than just hearing this barrage of the world's gone to shit."</p>
+            <cite>Focus group participant, University of Bristol, 2025</cite>
+          </div>
+
+          <h3>The mechanics</h3>
+          <div class="tk-two">
+            <div class="tk-two-card">
+              <h4>Format</h4>
+              <p>Vertical, mobile-first. Under 90 seconds for breaking analysis. 2&ndash;5 minutes for reflective formats. Captions on by default &mdash; most social video is watched without sound.</p>
+            </div>
+            <div class="tk-two-card">
+              <h4>The first three seconds</h4>
+              <p>You have three seconds before the scroll. Lead with a question (&ldquo;Is this video real?&rdquo;), a striking visual, or a counter-intuitive claim. Then earn the rest.</p>
+            </div>
+            <div class="tk-two-card">
+              <h4>Cadence</h4>
+              <p>Three or more posts per week signals credibility to algorithms and audiences. Better to publish a tight 60-second analysis than a polished 5-minute video three weeks late.</p>
+            </div>
+            <div class="tk-two-card">
+              <h4>Tone</h4>
+              <p>Educative, measured, specific. Crisis content that instils panic causes immediate disengagement. Sober framing keeps audiences watching &mdash; and matches the credibility you've built elsewhere.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05: FORMATS -->
+        <section id="formats" class="toolkit-section">
+          <p class="toolkit-section-eyebrow">05 &middot; Pillar three</p>
+          <h2>Three video formats. Pick the one that fits your investigation.</h2>
+          <p>Analysis of crisis content that performs well on TikTok, Instagram Reels, and YouTube Shorts shows that the majority falls into three formats. Each maps cleanly onto a different kind of OSINT output. The templates below are starting points, not constraints.</p>
+
+          <div class="tk-format">
+            <div class="tk-format-head">
+              <h3>1. Forensic</h3>
+              <span class="tk-format-tag">Reliable &middot; Trustworthy &middot; Current</span>
+            </div>
+            <p>The natural format for OSINT. You take a piece of footage or imagery from an unfolding event, walk audiences through the verification process on screen, and let them see the conclusion form. This is the format where your methodology is the strongest competitive advantage. Use it for breaking events, contested footage, and misinformation correction.</p>
+            <h4 style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-top:.7rem;margin-bottom:.4rem;">You need</h4>
+            <ul>
+              <li>Footage or satellite imagery from an emerging event</li>
+              <li>A documented verification chain (your existing workflow output)</li>
+              <li>A voice-over &mdash; presenter on camera not required</li>
+            </ul>
+            <div class="tk-format-flow">
+              <span>Hook</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>Context</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>Analysis</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>Evidence</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>So what</span>
+            </div>
+          </div>
+
+          <div class="tk-format">
+            <div class="tk-format-head">
+              <h3>2. Talking Head</h3>
+              <span class="tk-format-tag">Engaging &middot; Contextual &middot; Digestible</span>
+            </div>
+            <p>A trusted face explains a developing situation over crisis imagery and verified footage. The format that competes most directly with influencer commentary &mdash; with the difference that you have the actual evidence behind you. Use it for explainers, situation updates, and translating long-form investigations into 60-second context.</p>
+            <h4 style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-top:.7rem;margin-bottom:.4rem;">You need</h4>
+            <ul>
+              <li>A presenter on camera (analyst, investigator, comms lead)</li>
+              <li>Verified imagery and B-roll for overlay</li>
+              <li>Named sources cited on screen as the presenter speaks</li>
+            </ul>
+            <div class="tk-format-flow">
+              <span>Hook</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>Context</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>Current</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>Evidence</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>So what</span>
+            </div>
+          </div>
+
+          <div class="tk-format">
+            <div class="tk-format-head">
+              <h3>3. Reflective</h3>
+              <span class="tk-format-tag">In-depth &middot; Refined &middot; Quality</span>
+            </div>
+            <p>Short-form documentary. Higher production, longer runtime (2&ndash;5 minutes), and better suited to investigations where the historical context matters as much as the current event. The format that justifies a slower production timeline. Use it for major releases, anniversary pieces, and pattern-of-conduct investigations that don't fit a 60-second window.</p>
+            <h4 style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-top:.7rem;margin-bottom:.4rem;">You need</h4>
+            <ul>
+              <li>Extensive verified footage and historical material</li>
+              <li>A narrator (on or off camera) and a clear thesis</li>
+              <li>Expert input or testimony, where appropriate</li>
+            </ul>
+            <div class="tk-format-flow">
+              <span>Hook</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>Historical</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>Footage</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>Expert</span><span class="tk-flow-arrow">&rsaquo;</span>
+              <span>So what</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 06: WORKFLOW -->
+        <section id="workflow" class="toolkit-section">
+          <p class="toolkit-section-eyebrow">06 &middot; Pillar four</p>
+          <h2>Building a comms function without a comms team</h2>
+          <p>Reviewer feedback identified a specific need: smaller and newer OSINT collectives &mdash; the ones doing some of the most agile work in the sector &mdash; often don't have dedicated communications staff. Hiring one isn't always realistic, and bringing in an external comms agency rarely produces output that respects verification standards. This pillar is for those organisations.</p>
+          <p>The principle is to build social-facing output <em>into</em> existing investigation workflows, using people you already have. Verification artefacts that already exist (geolocation maps, frame breakdowns, source tables) become the raw material for content; investigators who already understand the work narrate it; a lightweight publishing process replaces a dedicated comms function.</p>
+
+          <h3>The four-stage workflow</h3>
+          <div class="tk-pipeline">
+            <div class="tk-step">
+              <div class="tk-step-n">Stage 01</div>
+              <h4>Investigate</h4>
+              <p>Verification artefacts produced as normal: geolocation, source table, frame analysis, confidence statement.</p>
+            </div>
+            <div class="tk-step">
+              <div class="tk-step-n">Stage 02</div>
+              <h4>Translate</h4>
+              <p>Investigator drafts a 60&ndash;90 second narrative version using the format template that fits.</p>
+            </div>
+            <div class="tk-step">
+              <div class="tk-step-n">Stage 03</div>
+              <h4>Edit</h4>
+              <p>Apply on-screen sourcing template, captions, and verification chain visualisation. Tooling stays light.</p>
+            </div>
+            <div class="tk-step">
+              <div class="tk-step-n">Stage 04</div>
+              <h4>Publish</h4>
+              <p>Within the news cycle. Track performance. Feed insights back into stage 02 templates.</p>
+            </div>
+          </div>
+
+          <h3>Roles, with no new hires</h3>
+          <div class="tk-two">
+            <div class="tk-two-card">
+              <h4>Who does what</h4>
+              <p><strong>Investigator</strong> drafts the narrative version of their own investigation &mdash; nobody else understands the verification chain better. <strong>One team member</strong> takes on editing and publishing as a rotating responsibility, supported by templates. <strong>The org</strong> sets cadence, tone, and review standards.</p>
+            </div>
+            <div class="tk-two-card">
+              <h4>Cadence to aim for</h4>
+              <p>Three short-form posts per week as a target. A reflective release every 2&ndash;4 weeks. Daily posting is not the goal &mdash; consistency and verification standards are. Publishing windows tied to news cycle, not weekday office hours.</p>
+            </div>
+          </div>
+
+          <div class="tk-callout">
+            <p>Tooling deliberately kept light: a video editor (CapCut, DaVinci Resolve, Premiere), a captions tool, a shared template library, and a source-tracking sheet. This pillar avoids recommending bespoke comms platforms because investigators won't adopt them.</p>
+          </div>
+        </section>
+
+        <!-- 07: CHECKLIST -->
+        <section id="checklist" class="toolkit-section">
+          <p class="toolkit-section-eyebrow">07 &middot; Checklist</p>
+          <h2>Before you hit post</h2>
+          <p>A pre-publish checklist designed to be run in under five minutes, by the investigator who produced the content. Anything that fails should block publishing.</p>
+
+          <div class="tk-checklist">
+            <h4>Sourcing &amp; verification</h4>
+            <ul>
+              <li>Every figure on screen is attributed to a named source with a date</li>
+              <li>Every piece of footage carries platform, date, and verification method as a lower-third caption</li>
+              <li>Confidence level is named explicitly: verified, likely, contested, unverified</li>
+              <li>Anything that couldn't be verified is acknowledged on screen, not hidden</li>
+            </ul>
+          </div>
+
+          <div class="tk-checklist">
+            <h4>Engagement &amp; format</h4>
+            <ul>
+              <li>Vertical aspect ratio, mobile-first framing</li>
+              <li>Hook lands inside the first three seconds</li>
+              <li>Captions on by default and accurate</li>
+              <li>Tone is educative rather than alarming &mdash; pacing, music, language all checked</li>
+              <li>A clear &ldquo;so what&rdquo; at the end, not a fade-out</li>
+            </ul>
+          </div>
+
+          <div class="tk-checklist">
+            <h4>Safety &amp; ethics</h4>
+            <ul>
+              <li>No content that could identify individuals at risk of retaliation</li>
+              <li>Consent confirmed for any named witness footage</li>
+              <li>Affected communities portrayed with agency, not only as recipients</li>
+              <li>No graphic imagery used as a hook</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 08: WHAT'S NEXT -->
+        <section id="next" class="toolkit-section">
+          <p class="toolkit-section-eyebrow">08 &middot; Iteration</p>
+          <h2>This toolkit is an early working draft</h2>
+          <p>The version above is v0.1 and has not yet been through formal co-creation with sector partners. It is built on STORINT's foundational four-pillar framework, primary focus group research at the University of Bristol, and reviewer input from the April 2026 innovation showcase &mdash; including direct feedback from leadership at the Centre for Information Resilience, Action on Armed Violence, and academic partners at SOAS, Birkbeck, and the University of Bristol.</p>
+          <p>The next iteration will be developed with practitioners. If you work in OSINT and want to shape what's here &mdash; including disagreeing with any of it &mdash; we'd like to hear from you.</p>
+
+          <div class="tk-foot">
+            <h3>Want to shape the next version?</h3>
+            <p>This toolkit improves the more practitioners stress-test it. Share what works for your team, what doesn't translate to your context, and what's missing.</p>
+            <a href="feedback.html" class="btn btn-cyan">Share feedback</a>
+            <a href="mailto:stor.int@outlook.com" class="btn btn-ghost">Get in touch</a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <a href="index.html" class="footer-logo"><img src="storint logo.svg" alt="STORINT" class="footer-logo-img"></a>
+    <div class="footer-links">
+      <a href="https://stori.nt" class="footer-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+        @stori.nt
+      </a>
+      <a href="mailto:stor.int@outlook.com" class="footer-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="m2 7 10 7 10-7"/>
+        </svg>
+        stor.int@outlook.com
+      </a>
+    </div>
+    <span class="footer-copy">&copy; 2026 STORINT</span>
+  </footer>
+
+</body>
+</html>
