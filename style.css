@@ -463,7 +463,7 @@ footer {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.7rem 1.6rem 1.5rem;
+  padding: 2rem 1.7rem 1.5rem;
   text-decoration: none;
   color: var(--text);
   transition: transform .2s, box-shadow .2s, border-color .2s;
@@ -474,49 +474,49 @@ footer {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 6px;
+  height: 10px;
   background: currentColor;
 }
 .audience-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(15,14,26,.08);
+  box-shadow: 0 12px 32px rgba(15,14,26,.10);
 }
 
 /* Humanitarian — orange (community pillar) */
 .audience-card-com {
   color: var(--pill-com);
-  background: var(--pill-com-tint);
-  border-color: var(--pill-com-pale);
+  background: var(--pill-com-pale);
+  border-color: var(--pill-com);
 }
-.audience-card-com:hover { border-color: var(--pill-com); }
+.audience-card-com:hover { box-shadow: 0 12px 32px rgba(217,123,43,.22); }
 .audience-card-com .audience-tag { color: var(--pill-com-dark); }
 .audience-card-com h3 { color: var(--pill-com-dark); }
-.audience-card-com p { color: var(--text); }
-.audience-card-com .audience-cta { color: var(--pill-com); }
+.audience-card-com p { color: var(--pill-com-dark); }
+.audience-card-com .audience-cta { color: var(--pill-com-dark); }
 
 /* OSINT — blue (osint pillar) */
 .audience-card-osi {
   color: var(--pill-osi);
-  background: var(--pill-osi-tint);
-  border-color: var(--pill-osi-pale);
+  background: var(--pill-osi-pale);
+  border-color: var(--pill-osi);
 }
-.audience-card-osi:hover { border-color: var(--pill-osi); }
+.audience-card-osi:hover { box-shadow: 0 12px 32px rgba(45,125,181,.24); }
 .audience-card-osi .audience-tag { color: var(--pill-osi-dark); }
 .audience-card-osi h3 { color: var(--pill-osi-dark); }
-.audience-card-osi p { color: var(--text); }
-.audience-card-osi .audience-cta { color: var(--pill-osi); }
+.audience-card-osi p { color: var(--pill-osi-dark); }
+.audience-card-osi .audience-cta { color: var(--pill-osi-dark); }
 
 /* Journalism — soft green */
 .audience-card-jou {
   color: var(--pill-jou);
-  background: var(--pill-jou-tint);
-  border-color: var(--pill-jou-pale);
+  background: var(--pill-jou-pale);
+  border-color: var(--pill-jou);
 }
-.audience-card-jou:hover { border-color: var(--pill-jou); }
+.audience-card-jou:hover { box-shadow: 0 12px 32px rgba(87,136,81,.24); }
 .audience-card-jou .audience-tag { color: var(--pill-jou-dark); }
 .audience-card-jou h3 { color: var(--pill-jou-dark); }
-.audience-card-jou p { color: var(--text); }
-.audience-card-jou .audience-cta { color: var(--pill-jou); }
+.audience-card-jou p { color: var(--pill-jou-dark); }
+.audience-card-jou .audience-cta { color: var(--pill-jou-dark); }
 
 .audience-tag {
   font-family: 'DM Mono', monospace;
@@ -783,34 +783,95 @@ footer {
   font-weight: 300;
 }
 
-/* Pillar-themed sections — each maps onto a foundational toolkit pillar */
+/* Pillar-themed sections — each maps onto a foundational toolkit pillar.
+   Colour-blocked: tinted background, full-strength top border, white inner cards. */
 .toolkit-section.pillar-com {
-  border-top: 4px solid var(--pill-com);
+  background: var(--pill-com-tint);
+  border: 1px solid var(--pill-com-pale);
+  border-top: 6px solid var(--pill-com);
 }
 .toolkit-section.pillar-com .toolkit-section-eyebrow,
-.toolkit-section.pillar-com h2 { color: var(--pill-com-dark); }
+.toolkit-section.pillar-com h2,
 .toolkit-section.pillar-com h3 { color: var(--pill-com-dark); }
 
 .toolkit-section.pillar-osi {
-  border-top: 4px solid var(--pill-osi);
+  background: var(--pill-osi-tint);
+  border: 1px solid var(--pill-osi-pale);
+  border-top: 6px solid var(--pill-osi);
 }
 .toolkit-section.pillar-osi .toolkit-section-eyebrow,
-.toolkit-section.pillar-osi h2 { color: var(--pill-osi-dark); }
+.toolkit-section.pillar-osi h2,
 .toolkit-section.pillar-osi h3 { color: var(--pill-osi-dark); }
 
 .toolkit-section.pillar-att {
-  border-top: 4px solid var(--pill-att);
+  background: var(--pill-att-tint);
+  border: 1px solid var(--pill-att-pale);
+  border-top: 6px solid var(--pill-att);
 }
 .toolkit-section.pillar-att .toolkit-section-eyebrow,
-.toolkit-section.pillar-att h2 { color: var(--pill-att-dark); }
+.toolkit-section.pillar-att h2,
 .toolkit-section.pillar-att h3 { color: var(--pill-att-dark); }
 
 .toolkit-section.pillar-sto {
-  border-top: 4px solid var(--pill-sto);
+  background: var(--pill-sto-tint);
+  border: 1px solid var(--pill-sto-pale);
+  border-top: 6px solid var(--pill-sto);
 }
 .toolkit-section.pillar-sto .toolkit-section-eyebrow,
-.toolkit-section.pillar-sto h2 { color: var(--pill-sto-dark); }
+.toolkit-section.pillar-sto h2,
 .toolkit-section.pillar-sto h3 { color: var(--pill-sto-dark); }
+
+/* Inner cards inside pillar sections invert: white on tint */
+.toolkit-section[class*="pillar-"] .tk-two-card,
+.toolkit-section[class*="pillar-"] .tk-three-card,
+.toolkit-section[class*="pillar-"] .tk-stat,
+.toolkit-section[class*="pillar-"] .tk-pipeline,
+.toolkit-section[class*="pillar-"] .tk-checklist,
+.toolkit-section[class*="pillar-"] .tk-format {
+  background: var(--white);
+  border: 1px solid rgba(15,14,26,.06);
+}
+
+/* Pillar-coloured tk-stat top border replaces the default cyan */
+.toolkit-section.pillar-com .tk-stat { border-top: 3px solid var(--pill-com); }
+.toolkit-section.pillar-osi .tk-stat { border-top: 3px solid var(--pill-osi); }
+.toolkit-section.pillar-att .tk-stat { border-top: 3px solid var(--pill-att); }
+.toolkit-section.pillar-sto .tk-stat { border-top: 3px solid var(--pill-sto); }
+.toolkit-section.pillar-com .tk-stat .tk-stat-n { color: var(--pill-com-dark); }
+.toolkit-section.pillar-osi .tk-stat .tk-stat-n { color: var(--pill-osi-dark); }
+.toolkit-section.pillar-att .tk-stat .tk-stat-n { color: var(--pill-att-dark); }
+.toolkit-section.pillar-sto .tk-stat .tk-stat-n { color: var(--pill-sto-dark); }
+
+/* Pillar-coloured tk-three-card top border */
+.toolkit-section.pillar-com .tk-three-card { border-top: 3px solid var(--pill-com); }
+.toolkit-section.pillar-osi .tk-three-card { border-top: 3px solid var(--pill-osi); }
+.toolkit-section.pillar-att .tk-three-card { border-top: 3px solid var(--pill-att); }
+.toolkit-section.pillar-sto .tk-three-card { border-top: 3px solid var(--pill-sto); }
+
+/* Pillar-coloured tk-two-card heading */
+.toolkit-section.pillar-com .tk-two-card h4 { color: var(--pill-com-dark); }
+.toolkit-section.pillar-osi .tk-two-card h4 { color: var(--pill-osi-dark); }
+.toolkit-section.pillar-att .tk-two-card h4 { color: var(--pill-att-dark); }
+.toolkit-section.pillar-sto .tk-two-card h4 { color: var(--pill-sto-dark); }
+.toolkit-section.pillar-com .tk-three-card h4 { color: var(--pill-com-dark); }
+.toolkit-section.pillar-osi .tk-three-card h4 { color: var(--pill-osi-dark); }
+.toolkit-section.pillar-att .tk-three-card h4 { color: var(--pill-att-dark); }
+.toolkit-section.pillar-sto .tk-three-card h4 { color: var(--pill-sto-dark); }
+
+/* SVG embeds inside pillar sections sit on white panels for breathing room */
+.toolkit-section[class*="pillar-"] .tk-svg-embed {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem 1.2rem;
+  border: 1px solid rgba(15,14,26,.06);
+}
+
+/* Format grid SVGs need extra room and shouldn't have the white panel since each SVG IS its own visual block */
+.toolkit-section[class*="pillar-"] .tk-format-grid .tk-svg-embed {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
 
 /* Pillar tag - small chip identifying which foundational pillar */
 .pillar-chip {
