@@ -22,6 +22,32 @@
   --white:  #ffffff;
   --radius: 10px;
   --radius-lg: 14px;
+
+  /* Foundational toolkit pillar palette */
+  --pill-com:       #d97b2b;
+  --pill-com-dark:  #894d16;
+  --pill-com-pale:  #fae3cf;
+  --pill-com-tint:  #fdf3e8;
+
+  --pill-osi:       #2d7db5;
+  --pill-osi-dark:  #1a4e74;
+  --pill-osi-pale:  #b9d4e7;
+  --pill-osi-tint:  #e6eff7;
+
+  --pill-att:       #c74040;
+  --pill-att-dark:  #7a2020;
+  --pill-att-pale:  #e9bfc0;
+  --pill-att-tint:  #fbeded;
+
+  --pill-sto:       #6b4c9b;
+  --pill-sto-dark:  #3e2b5e;
+  --pill-sto-pale:  #d8cce7;
+  --pill-sto-tint:  #f1ecf6;
+
+  --pill-jou:       #578851;
+  --pill-jou-dark:  #2f5530;
+  --pill-jou-pale:  #cfe2cd;
+  --pill-jou-tint:  #eaf3e8;
 }
 
 html { scroll-behavior: smooth; }
@@ -427,7 +453,7 @@ footer {
 .audience-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 16px;
+  gap: 18px;
   margin: 2rem 0 2.5rem;
 }
 
@@ -437,7 +463,7 @@ footer {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 1.6rem 1.5rem 1.4rem;
+  padding: 1.7rem 1.6rem 1.5rem;
   text-decoration: none;
   color: var(--text);
   transition: transform .2s, box-shadow .2s, border-color .2s;
@@ -448,39 +474,58 @@ footer {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--cyan);
-  opacity: .55;
+  height: 6px;
+  background: currentColor;
 }
 .audience-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(24,0,173,.08);
-  border-color: var(--cyan);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(15,14,26,.08);
 }
-.audience-card:hover::before { opacity: 1; }
 
-.audience-card-feature {
-  background: var(--navy);
-  color: var(--white);
-  border-color: var(--navy);
+/* Humanitarian — orange (community pillar) */
+.audience-card-com {
+  color: var(--pill-com);
+  background: var(--pill-com-tint);
+  border-color: var(--pill-com-pale);
 }
-.audience-card-feature::before { background: var(--light); opacity: 1; }
-.audience-card-feature:hover {
-  box-shadow: 0 10px 28px rgba(24,0,173,.25);
-  border-color: var(--light);
+.audience-card-com:hover { border-color: var(--pill-com); }
+.audience-card-com .audience-tag { color: var(--pill-com-dark); }
+.audience-card-com h3 { color: var(--pill-com-dark); }
+.audience-card-com p { color: var(--text); }
+.audience-card-com .audience-cta { color: var(--pill-com); }
+
+/* OSINT — blue (osint pillar) */
+.audience-card-osi {
+  color: var(--pill-osi);
+  background: var(--pill-osi-tint);
+  border-color: var(--pill-osi-pale);
 }
-.audience-card-feature p { color: rgba(255,255,255,.78); }
-.audience-card-feature .audience-tag { color: var(--light); }
-.audience-card-feature .audience-cta { color: var(--light); }
+.audience-card-osi:hover { border-color: var(--pill-osi); }
+.audience-card-osi .audience-tag { color: var(--pill-osi-dark); }
+.audience-card-osi h3 { color: var(--pill-osi-dark); }
+.audience-card-osi p { color: var(--text); }
+.audience-card-osi .audience-cta { color: var(--pill-osi); }
+
+/* Journalism — soft green */
+.audience-card-jou {
+  color: var(--pill-jou);
+  background: var(--pill-jou-tint);
+  border-color: var(--pill-jou-pale);
+}
+.audience-card-jou:hover { border-color: var(--pill-jou); }
+.audience-card-jou .audience-tag { color: var(--pill-jou-dark); }
+.audience-card-jou h3 { color: var(--pill-jou-dark); }
+.audience-card-jou p { color: var(--text); }
+.audience-card-jou .audience-cta { color: var(--pill-jou); }
 
 .audience-tag {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
   letter-spacing: .16em;
-  color: var(--blue);
   text-transform: uppercase;
-  margin-bottom: .6rem;
+  margin-bottom: .7rem;
   display: block;
+  font-weight: 500;
 }
 
 .audience-card h3 {
@@ -494,15 +539,15 @@ footer {
 .audience-card p {
   font-size: 13.5px;
   line-height: 1.6;
-  color: var(--muted);
-  margin-bottom: 1.1rem;
+  color: var(--text);
+  margin-bottom: 1.2rem;
   flex: 1;
+  font-weight: 300;
 }
 
 .audience-cta {
   font-size: 13px;
   font-weight: 500;
-  color: var(--blue);
   letter-spacing: .01em;
 }
 
@@ -553,25 +598,28 @@ footer {
 
 /* ── TOOLKIT PAGES ── */
 .toolkit-header {
+  background: var(--off);
+  padding: 2.5rem 2.5rem 0;
+  position: relative;
+}
+.toolkit-header-inner {
+  max-width: 980px;
+  margin: 0 auto;
   background: var(--navy);
-  padding: 3.5rem 2.5rem 4rem;
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 3rem 3rem 3.25rem;
   position: relative;
   overflow: hidden;
-  color: var(--white);
 }
-.toolkit-header::before {
+.toolkit-header-inner::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 80% 100%, #02b3e022 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 60% at 90% 100%, #02b3e022 0%, transparent 70%);
   pointer-events: none;
 }
-.toolkit-header-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
+.toolkit-header-inner > * { position: relative; z-index: 1; }
 .toolkit-tag {
   display: inline-block;
   font-family: 'DM Mono', monospace;
@@ -623,14 +671,14 @@ footer {
 /* Toolkit body layout */
 .toolkit-body {
   background: var(--off);
-  padding: 3rem 2.5rem 5rem;
+  padding: 2rem 2.5rem 5rem;
 }
 .toolkit-layout {
-  max-width: 1080px;
+  max-width: 980px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 3.5rem;
+  grid-template-columns: 200px 1fr;
+  gap: 2.5rem;
   align-items: flex-start;
 }
 
@@ -734,6 +782,95 @@ footer {
   margin-bottom: .35rem;
   font-weight: 300;
 }
+
+/* Pillar-themed sections — each maps onto a foundational toolkit pillar */
+.toolkit-section.pillar-com {
+  border-top: 4px solid var(--pill-com);
+}
+.toolkit-section.pillar-com .toolkit-section-eyebrow,
+.toolkit-section.pillar-com h2 { color: var(--pill-com-dark); }
+.toolkit-section.pillar-com h3 { color: var(--pill-com-dark); }
+
+.toolkit-section.pillar-osi {
+  border-top: 4px solid var(--pill-osi);
+}
+.toolkit-section.pillar-osi .toolkit-section-eyebrow,
+.toolkit-section.pillar-osi h2 { color: var(--pill-osi-dark); }
+.toolkit-section.pillar-osi h3 { color: var(--pill-osi-dark); }
+
+.toolkit-section.pillar-att {
+  border-top: 4px solid var(--pill-att);
+}
+.toolkit-section.pillar-att .toolkit-section-eyebrow,
+.toolkit-section.pillar-att h2 { color: var(--pill-att-dark); }
+.toolkit-section.pillar-att h3 { color: var(--pill-att-dark); }
+
+.toolkit-section.pillar-sto {
+  border-top: 4px solid var(--pill-sto);
+}
+.toolkit-section.pillar-sto .toolkit-section-eyebrow,
+.toolkit-section.pillar-sto h2 { color: var(--pill-sto-dark); }
+.toolkit-section.pillar-sto h3 { color: var(--pill-sto-dark); }
+
+/* Pillar tag - small chip identifying which foundational pillar */
+.pillar-chip {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.pillar-com .pillar-chip { background: var(--pill-com-pale); color: var(--pill-com-dark); }
+.pillar-osi .pillar-chip { background: var(--pill-osi-pale); color: var(--pill-osi-dark); }
+.pillar-att .pillar-chip { background: var(--pill-att-pale); color: var(--pill-att-dark); }
+.pillar-sto .pillar-chip { background: var(--pill-sto-pale); color: var(--pill-sto-dark); }
+
+/* SVG embed - centred, responsive, with a subtle frame */
+.tk-svg-embed {
+  margin: 1.4rem 0 1rem;
+  text-align: center;
+}
+.tk-svg-embed img,
+.tk-svg-embed object {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.tk-svg-embed-caption {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: .65rem;
+}
+
+/* Three-format grid: side-by-side storytelling format SVGs */
+.tk-format-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 1.4rem 0;
+}
+.tk-format-grid .tk-svg-embed { margin: 0; }
+.tk-format-grid .tk-svg-embed img { width: 100%; height: auto; border-radius: 8px; }
+
+/* Pillar mini-callout with pillar-themed border */
+.pillar-com .tk-callout { border-left-color: var(--pill-com); background: var(--pill-com-tint); }
+.pillar-osi .tk-callout { border-left-color: var(--pill-osi); background: var(--pill-osi-tint); }
+.pillar-att .tk-callout { border-left-color: var(--pill-att); background: var(--pill-att-tint); }
+.pillar-sto .tk-callout { border-left-color: var(--pill-sto); background: var(--pill-sto-tint); }
+
+/* Pillar-themed quote */
+.pillar-com .tk-quote { border-left-color: var(--pill-com); }
+.pillar-osi .tk-quote { border-left-color: var(--pill-osi); }
+.pillar-att .tk-quote { border-left-color: var(--pill-att); }
+.pillar-sto .tk-quote { border-left-color: var(--pill-sto); }
 
 /* Toolkit callouts and quotes */
 .tk-callout {
